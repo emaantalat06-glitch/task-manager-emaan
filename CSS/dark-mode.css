@@ -1,0 +1,50 @@
+/* Applied when <body> has class "dark-mode" */
+
+body.dark-mode { background: #15151f; color: #eceaf5; }
+
+body.dark-mode .app-header { background: linear-gradient(135deg, #c9184a, #800f30); }
+
+body.dark-mode .stats-bar,
+body.dark-mode .controls-bar,
+body.dark-mode .tab-btn,
+body.dark-mode .column,
+body.dark-mode .modal-box {
+  background: #1f1f2c;
+}
+
+body.dark-mode .column-header h2,
+body.dark-mode .modal-box h2,
+body.dark-mode .form-group label,
+body.dark-mode .card-title {
+  color: #eceaf5;
+}
+
+body.dark-mode .task-card { background: #292938; }
+body.dark-mode .task-card.done { background: #1c2e23; }
+body.dark-mode .task-card.done .card-title { color: #8a8aa0; }
+
+body.dark-mode .count-badge { background: #3a2a35; color: #ff8fa3; }
+body.dark-mode .tag-pill { background: #3a2a35; color: #ff8fa3; }
+
+body.dark-mode .controls-bar input,
+body.dark-mode .controls-bar select,
+body.dark-mode .controls-bar button,
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+  background: #292938; border-color: #3a3a4d; color: #eceaf5;
+}
+
+body.dark-mode .btn-secondary,
+body.dark-mode #clear-filters-btn {
+  background: #292938; color: #eceaf5;
+}
+
+body.dark-mode .stat-label,
+body.dark-mode .card-description,
+body.dark-mode .due-date,
+body.dark-mode .text-soft {
+  color: #9a98ad;
+}
+
+body.dark-mode .progress-bar { background: #3a2a35; }

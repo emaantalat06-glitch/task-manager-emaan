@@ -1,0 +1,45 @@
+/* ===== TRANSITIONS ===== */
+body, .app-header, .stats-bar, .controls-bar,
+.column, .task-card, .modal-box, .btn-primary,
+.btn-secondary, #theme-toggle-btn {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Card entrance animation */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.task-card {
+  animation: cardFadeIn 0.2s ease;
+}
+
+/* Modal entrance */
+@keyframes modalPopIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-box {
+  animation: modalPopIn 0.2s ease;
+}
+
+/* Overlay fade */
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-overlay {
+  animation: overlayFadeIn 0.15s ease;
+}
+
+/* Button press feedback */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Progress bar fill transition */
+.progress-fill {
+  transition: width 0.3s ease;
+}

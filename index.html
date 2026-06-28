@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Task Manager</title>
+
+  <!-- Google Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/dark-mode.css">
+  <link rel="stylesheet" href="CSS/animations.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="app-header">
+    <h1>Kanban Task Manager</h1>
+    <div class="header-actions">
+      <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="add-task-btn" class="btn-primary">
+        <i class="fa-solid fa-plus"></i> Add Task
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== STATS BAR ===== -->
+  <section id="stats-bar" class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-label">Total</span>
+      <span id="stat-total" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">In Progress</span>
+      <span id="stat-inprogress" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Completed</span>
+      <span id="stat-completed" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Overdue</span>
+      <span id="stat-overdue" class="stat-value">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Completion</span>
+      <span id="stat-completion-percent" class="stat-value">0%</span>
+      <div class="progress-bar">
+        <div id="completion-progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILTER / SEARCH / SORT BAR ===== -->
+  <section class="controls-bar">
+    <input type="text" id="search-input" placeholder="Search tasks...">
+
+    <select id="priority-filter">
+      <option value="all">All Priorities</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+    </select>
+
+    <select id="sort-select">
+      <option value="default">Sort by...</option>
+      <option value="dueDate">Due Date</option>
+      <option value="priority">Priority</option>
+      <option value="createdAt">Date Created</option>
+    </select>
+
+    <button id="clear-filters-btn">Clear Filters</button>
+  </section>
+
+  <!-- ===== MOBILE/TABLET TABS (shown via CSS only on small screens) ===== -->
+  <div class="column-tabs" id="column-tabs">
+    <button class="tab-btn active" data-column="todo">To Do</button>
+    <button class="tab-btn" data-column="inprogress">In Progress</button>
+    <button class="tab-btn" data-column="done">Done</button>
+  </div>
+
+  <!-- ===== BOARD ===== -->
+  <main class="board">
+    <section class="column" data-column="todo">
+      <div class="column-header">
+        <h2>To Do</h2>
+        <span class="count-badge" id="count-todo">0</span>
+      </div>
+      <div class="card-list" id="list-todo"></div>
+    </section>
+
+    <section class="column" data-column="inprogress">
+      <div class="column-header">
+        <h2>In Progress</h2>
+        <span class="count-badge" id="count-inprogress">0</span>
+      </div>
+      <div class="card-list" id="list-inprogress"></div>
+    </section>
+
+    <section class="column" data-column="done">
+      <div class="column-header">
+        <h2>Done</h2>
+        <span class="count-badge" id="count-done">0</span>
+      </div>
+      <div class="card-list" id="list-done"></div>
+    </section>
+  </main>
+
+  <!-- ===== MODAL CONTAINER (task create/edit form injected here) ===== -->
+  <div id="modal-container"></div>
+
+  <!-- ===== CUSTOM CONFIRM DIALOG CONTAINER ===== -->
+  <div id="confirm-dialog-container"></div>
+
+  <!-- ===== SCRIPTS (order matters, all deferred) ===== -->
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/tasks.js"></script>
+  <script defer src="js/board.js"></script>
+  <script defer src="js/filters.js"></script>
+  <script defer src="js/stats.js"></script>
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/app.js"></script>
+
+</body>
+</html>
