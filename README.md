@@ -11,7 +11,7 @@ A Kanban-style task management board built with **HTML, CSS, and vanilla JavaScr
  https://emaantalat06-glitch.github.io/task-manager-emaan/
 
 ## Video Walkthrough
-
+https://www.loom.com/share/b04c2dd5da42435f8d8ed359eeb576bd
 
 ## Features
 - Create, edit, and delete tasks with full form validation (no browser alerts — all custom inline UI)
