@@ -8,7 +8,7 @@ A Kanban-style task management board built with **HTML, CSS, and vanilla JavaScr
 A Kanban-style task management board built with **HTML, CSS, and vanilla JavaScript** — no frameworks, no backend. Tasks are fully persistent across page reloads using localStorage, inspired by tools like Trello and Jira.
 
 ## Live Demo
-
+ https://emaantalat06-glitch.github.io/task-manager-emaan/
 
 ## Video Walkthrough
 
